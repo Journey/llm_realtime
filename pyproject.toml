@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "llm-realtime"
+version = "0.1.0"
+description = "llm realtime trial"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+websockets = "^13.1"
+fastapi = "^0.115.4"
+opentelemetry-api = "^1.27.0"
+opentelemetry-sdk = "^1.27.0"
+opentelemetry-exporter-prometheus = "^0.48b0"
+pyjwt = "^2.9.0"
+python-multipart = "^0.0.17"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.3.1"
+pytest = "^8.3.3"
+black = "^24.10.0"
+
+[tool.poetry.scripts]
+socket = "backend:msocket"
+client = "backent:mclient"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
